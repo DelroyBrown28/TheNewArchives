@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>archives.blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="top_blurb">
+        <p class="blog_blurb"><span class="archives_blog_text">archives.blog</span> A short blurb on<br>
+            what the site is about and<br>what can be expected...</p>
+    </div>
+
+    {% for blog_post in blog_post %}
+
+    <div class="blog_posts_wrap">
+        <div class="blog_posts">
+            <h4 class="blog_post_title">{{ blog_post.blog_title }}</h4>
+            <p class="blog_body">{{ blog_post.blog_body }}</p>
+        </div>
+    </div>
+
+    {% endfor %}
+
+
+</body>
+
+</html>
