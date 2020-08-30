@@ -1,0 +1,2 @@
+FLASK_APP=archivesBlog.py
+FLASK_DEBUG=1
